@@ -1,1 +1,724 @@
 
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ক্যাম্পাস কম্পিউটার প্রশিক্ষণ কেন্দ্র</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Hind Siliguri', sans-serif;
+    color: #142b49;
+    background: #ffffff;
+}
+
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Top Bar */
+
+.topbar {
+    background: #073b78;
+    color: white;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.topbar .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Header */
+
+header {
+    background: white;
+    box-shadow: 0 3px 15px #00000010;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+
+.logo {
+    color: #073b78;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.logo span {
+    display: block;
+    color: #10a66a;
+    font-size: 15px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+nav a {
+    color: #142b49;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #0879e8;
+}
+
+.btn {
+    display: inline-block;
+    background: #10a66a;
+    color: white;
+    padding: 12px 23px;
+    border-radius: 30px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #078451;
+}
+
+.btn-blue {
+    background: #073b78;
+}
+
+/* Hero Section */
+
+.hero {
+    background: linear-gradient(
+        110deg,
+        #f2f8ff,
+        #e4f1ff
+    );
+
+    padding: 55px 0 35px;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 35px;
+}
+
+.tag {
+    display: inline-block;
+    background: #e0f7ec;
+    color: #078451;
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 4vw, 52px);
+    color: #073b78;
+    line-height: 1.3;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: #10a66a;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #526781;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+/* Right Side Teacher Photo */
+
+.hero-photo {
+    height: 500px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+    filter: drop-shadow(0 15px 20px #143c6820);
+}
+
+/* Sections */
+
+section {
+    padding: 65px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-title h2 {
+    font-size: 35px;
+    color: #073b78;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #60738c;
+}
+
+/* Courses */
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.course-card {
+    border: 1px solid #e1eaf5;
+    border-radius: 18px;
+    padding: 25px;
+    background: white;
+    transition: 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px #073b7815;
+}
+
+.course-icon {
+    font-size: 35px;
+}
+
+.course-card h3 {
+    color: #073b78;
+    margin: 15px 0 10px;
+}
+
+.course-card p {
+    color: #60738c;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.course-card a {
+    color: #0879e8;
+    font-weight: 700;
+}
+
+/* About */
+
+.about {
+    background: #f4f8fd;
+}
+
+.about-content {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-content p {
+    line-height: 1.9;
+    color: #526781;
+    margin-top: 15px;
+}
+
+/* Contact */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.contact-box {
+    padding: 25px;
+    border: 1px solid #e1eaf5;
+    border-radius: 18px;
+}
+
+.contact-box h3 {
+    color: #073b78;
+    margin-bottom: 15px;
+}
+
+.contact-box p {
+    line-height: 1.9;
+    color: #526781;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 12px;
+    border: 1px solid #d4e0ed;
+    border-radius: 10px;
+    font: inherit;
+}
+
+textarea {
+    min-height: 100px;
+}
+
+/* Footer */
+
+footer {
+    background: #062f60;
+    color: white;
+    padding: 35px 0;
+    text-align: center;
+}
+
+footer p {
+    margin-top: 10px;
+    color: #c5d8ed;
+}
+
+/* Mobile Responsive */
+
+.menu-button {
+    display: none;
+    border: none;
+    background: #edf5ff;
+    color: #073b78;
+    font-size: 25px;
+    padding: 5px 12px;
+    border-radius: 8px;
+}
+
+@media (max-width: 850px) {
+
+    .menu-button {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        box-shadow: 0 10px 20px #00000010;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-photo {
+        height: 420px;
+    }
+
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .topbar .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .hero {
+        padding-top: 35px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-photo {
+        height: 340px;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Top Bar -->
+
+<div class="topbar">
+    <div class="container">
+        <span>📍 থানা মোড়, কেশবপুর, যশোর</span>
+        <span>দক্ষতা শিখুন, ভবিষ্যৎ গড়ুন</span>
+    </div>
+</div>
+
+<!-- Header -->
+
+<header>
+    <div class="container navbar">
+
+        <a href="#home" class="logo">
+            ক্যাম্পাস কম্পিউটার
+            <span>প্রশিক্ষণ কেন্দ্র</span>
+        </a>
+
+        <button class="menu-button" onclick="toggleMenu()">
+            ☰
+        </button>
+
+        <nav id="nav">
+            <a href="#home">হোম</a>
+            <a href="#courses">কোর্সসমূহ</a>
+            <a href="#about">আমাদের সম্পর্কে</a>
+            <a href="#contact">যোগাযোগ</a>
+        </nav>
+
+        <a href="#contact" class="btn">
+            ভর্তি সম্পর্কে জানুন
+        </a>
+
+    </div>
+</header>
+
+<!-- Hero Section -->
+
+<section class="hero" id="home">
+
+    <div class="container hero-content">
+
+        <!-- Left Side Text -->
+
+        <div>
+
+            <span class="tag">
+                কম্পিউটার শিখুন, দক্ষতা বাড়ান
+            </span>
+
+            <h1>
+                আপনার ভবিষ্যৎ গড়ুন
+                <br>
+                <span>ডিজিটাল দক্ষতার সঙ্গে</span>
+            </h1>
+
+            <p>
+                ক্যাম্পাস কম্পিউটার প্রশিক্ষণ কেন্দ্রে
+                হাতে-কলমে শিখুন কম্পিউটার, অফিস
+                অ্যাপ্লিকেশন, গ্রাফিক্স ডিজাইন ও
+                ওয়েব ডিজাইনের ব্যবহারিক দক্ষতা।
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#courses" class="btn btn-blue">
+                    কোর্সসমূহ দেখুন →
+                </a>
+
+                <a href="#contact" class="btn">
+                    ভর্তি সম্পর্কে জানুন
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Right Side Photo -->
+
+        <div class="hero-photo">
+
+            <img
+                src="teacher-photo.png"
+                alt="ক্যাম্পাস কম্পিউটার প্রশিক্ষক"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Courses Section -->
+
+<section id="courses">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>আমাদের কোর্সসমূহ</h2>
+            <p>আপনার পছন্দের কোর্স বেছে নিন</p>
+        </div>
+
+        <div class="course-grid">
+
+            <div class="course-card">
+                <div class="course-icon">🖥️</div>
+                <h3>কম্পিউটার বেসিক ও MS Office</h3>
+                <p>
+                    কম্পিউটার পরিচিতি, বাংলা-ইংরেজি
+                    টাইপিং, Word, Excel ও PowerPoint।
+                </p>
+                <a href="#contact">বিস্তারিত / ভর্তি →</a>
+            </div>
+
+            <div class="course-card">
+                <div class="course-icon">🎨</div>
+                <h3>গ্রাফিক্স ডিজাইন</h3>
+                <p>
+                    Photoshop, Illustrator এবং
+                    বাস্তব ডিজাইন প্রজেক্টের অনুশীলন।
+                </p>
+                <a href="#contact">বিস্তারিত / ভর্তি →</a>
+            </div>
+
+            <div class="course-card">
+                <div class="course-icon">🌐</div>
+                <h3>ওয়েব ডিজাইন</h3>
+                <p>
+                    HTML, CSS ও ওয়েবসাইট তৈরির
+                    মৌলিক বিষয় শেখা।
+                </p>
+                <a href="#contact">বিস্তারিত / ভর্তি →</a>
+            </div>
+
+            <div class="course-card">
+                <div class="course-icon">💻</div>
+                <h3>প্রোগ্রামিং</h3>
+                <p>
+                    প্রোগ্রামিংয়ের প্রাথমিক ধারণা
+                    ও কোডিং অনুশীলন।
+                </p>
+                <a href="#contact">বিস্তারিত / ভর্তি →</a>
+            </div>
+
+            <div class="course-card">
+                <div class="course-icon">📊</div>
+                <h3>অ্যাকাউন্টিং ও Excel</h3>
+                <p>
+                    হিসাবের কাজ, স্প্রেডশিট এবং
+                    অফিসের প্রয়োজনীয় দক্ষতা।
+                </p>
+                <a href="#contact">বিস্তারিত / ভর্তি →</a>
+            </div>
+
+            <div class="course-card">
+                <div class="course-icon">🚀</div>
+                <h3>ডিজিটাল দক্ষতা</h3>
+                <p>
+                    ইন্টারনেট, কম্পিউটার ব্যবহার
+                    ও অনলাইন কাজের ভিত্তি।
+                </p>
+                <a href="#contact">বিস্তারিত / ভর্তি →</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- About Section -->
+
+<section class="about" id="about">
+
+    <div class="container about-content">
+
+        <div class="section-title">
+            <h2>আমাদের সম্পর্কে</h2>
+        </div>
+
+        <p>
+            ক্যাম্পাস কম্পিউটার প্রশিক্ষণ কেন্দ্র
+            কেশবপুরের থানা মোড়ে অবস্থিত একটি
+            কম্পিউটার প্রশিক্ষণ কেন্দ্র।
+
+            আমাদের লক্ষ্য শিক্ষার্থীদের ব্যবহারিক
+            ডিজিটাল দক্ষতা অর্জনে সহায়তা করা।
+        </p>
+
+    </div>
+
+</section>
+
+<!-- Contact Section -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>যোগাযোগ ও ভর্তি</h2>
+            <p>কোর্স সম্পর্কে জানতে যোগাযোগ করুন</p>
+        </div>
+
+        <div class="contact-grid">
+
+            <div class="contact-box">
+
+                <h3>আমাদের ঠিকানা</h3>
+
+                <p>
+                    📍 থানা মোড়, কেশবপুর, যশোর
+                </p>
+
+                <p>
+                    📞 ফোন: আপনার নম্বর যুক্ত করুন
+                </p>
+
+                <p>
+                    ✉️ ইমেইল: আপনার ইমেইল যুক্ত করুন
+                </p>
+
+                <br>
+
+                <a
+                    class="btn btn-blue"
+                    target="_blank"
+                    href="https://www.google.com/maps/search/?api=1&query=Campus+Computer+Training+Center+Keshabpur+Jashore"
+                >
+                    Google Maps-এ দেখুন
+                </a>
+
+            </div>
+
+            <div class="contact-box">
+
+                <h3>ভর্তি সম্পর্কে জানতে</h3>
+
+                <form onsubmit="sendMessage(event)">
+
+                    <input
+                        type="text"
+                        placeholder="আপনার নাম"
+                        required
+                    >
+
+                    <input
+                        type="tel"
+                        placeholder="মোবাইল নম্বর"
+                        required
+                    >
+
+                    <select required>
+                        <option value="">কোর্স নির্বাচন করুন</option>
+                        <option>কম্পিউটার বেসিক ও MS Office</option>
+                        <option>গ্রাফিক্স ডিজাইন</option>
+                        <option>ওয়েব ডিজাইন</option>
+                        <option>প্রোগ্রামিং</option>
+                        <option>অ্যাকাউন্টিং ও Excel</option>
+                    </select>
+
+                    <textarea
+                        placeholder="আপনার প্রশ্ন লিখুন"
+                    ></textarea>
+
+                    <button class="btn btn-blue" type="submit">
+                        তথ্য জমা দিন
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+
+    <div class="container">
+
+        <h3>ক্যাম্পাস কম্পিউটার প্রশিক্ষণ কেন্দ্র</h3>
+
+        <p>
+            থানা মোড়, কেশবপুর, যশোর
+        </p>
+
+        <p>
+            © ২০২৬ ক্যাম্পাস কম্পিউটার।
+            সর্বস্বত্ব সংরক্ষিত।
+        </p>
+
+    </div>
+
+</footer>
+
+<script>
+
+function toggleMenu() {
+    document.getElementById("nav").classList.toggle("active");
+}
+
+function sendMessage(event) {
+    event.preventDefault();
+
+    alert("ধন্যবাদ! আপনার তথ্য গ্রহণ করা হয়েছে।");
+}
+
+</script>
+
+</body>
+</html>
